@@ -35,16 +35,15 @@ function findAndCount(Arr: Array<number>, idx: number): void {
   console.log('findAndCount', Arr);
   ArrArray.push(Arr);
 }
-function checkForMatch(Arr: Array<number>, ArrArray: Array<Array<number>>): boolean {
-  let match: boolean;
-  for (let i: number = 0; i <= ArrArray.length; i++) {
-    if (Arr == ArrArray[i]) {
-      match = true;
-    } else {
-      match = false;
+function checkForMatch(arr1: Array<number>, arr2: Array<Array<number>>): boolean {
+  if (arr1.length !== arr2.length) return false;
+  for (let i = 0; i < arr2.length; i++) {
+    for (var j = arr1.length; j--; ) {
+      if (arr1[j] !== arr2[i][j]) return false;
     }
   }
-  return match;
+
+  return true;
 }
 
 function main(): number {
