@@ -1,0 +1,8 @@
+{
+  "files": ["src/client.ts"],
+  "compilerOptions": {
+    "outDir": "./build/",
+    "noImplicitAny": true,
+    "target": "es2015"
+  }
+}
